@@ -1,6 +1,6 @@
 # Mandrag
 
-[![CircleCI](https://circleci.com/gh/cschiewek/mandrag.svg?style=svg)](https://circleci.com/gh/cschiewek/mandrag)
+[![](https://github.com/cschiewek/mandrag/workflows/Continuous%20Integration/badge.svg)](https://github.com/cschiewek/mandrag/actions?workflow=Continuous+Integration)
 
 Zero Confing Elixir Deployments to [Kubernetes](https://kubernetes.io/) via [Helm](https://helm.sh/)
 
