@@ -4,6 +4,7 @@ on:
   push
 
 jobs:
+
   test:
     runs-on: ubuntu-latest
     name: OTP ${{matrix.otp}} / Elixir ${{matrix.elixir}}
@@ -19,5 +20,9 @@ jobs:
           elixir-version: ${{matrix.elixir}}
       - run: mix deps.get
       - run: mix test
-      - if: github.ref == 'cd'
-        run: echo 'This is the CD job'
+
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy to hex
+    steps:
+      - run: echo 'Deploy'
