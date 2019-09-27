@@ -19,9 +19,5 @@ jobs:
           elixir-version: ${{matrix.elixir}}
       - run: mix deps.get
       - run: mix test
-
-  deploy:
-    runs-on: ubuntu-latest
-    if: github.ref == 'cd'
-    steps:
-      - run: echo 'This is the CD job'
+      - if: github.ref == 'cd'
+        run: echo 'This is the CD job'
